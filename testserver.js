@@ -43,8 +43,8 @@ let outResultArray = [];
 // ================================================================
 // setup our express application
 // ================================================================
-// app.set('view engine', 'html');
-// app.use('public', express.static(process.cwd() + 'public'));
+app.set('view engine', 'html');
+app.use('public', express.static(process.cwd() + 'public'));
 // app.engine('html', require('ejs').renderFile);
 
 app.set('views', __dirname);
@@ -61,9 +61,13 @@ let storage = multer.diskStorage({
      }
 });
 
- 
+ console.log(storage)
 
  
+app.get('/', (req, res)=>{
+    console.log(req.hostname)
+    res.send(__dirname +  '/views/index.html')
+})
    
  
 server.listen(port, function() {
