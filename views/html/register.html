@@ -86,11 +86,11 @@
         </div>
         
         <div class="input-group mb-4">
-          <select id="sub_type" name="sub_type" class="form-control" placeholder="Subscription Type" onchange="getSubscriptionFee(this.value)">
+          <select style="font-size: 14px;" id="sub_type" name="sub_type" class="form-control" placeholder="Subscription Type" onchange="getSubscriptionFee(this.value)">
             <option value="0">Please, select a subscription type.....</option>
-            <option value="annual">Yearly Subscription</option>
-            <option value="biannual">Bi-Annual Subscription</option>
-            <option value="quarter">Quarterly Subscription</option>
+            <option value="annual">Yearly Subscription...</option>
+            <option value="biannual">Bi-Annual Subscription...</option>
+            <option value="quarter">Quarterly Subscription...</option>
           </select>
           <div class="input-group-append">
             <div class="input-group-text">
@@ -98,8 +98,16 @@
             </div>
           </div>
         </div>
+        <div class="input-group mb-3">
+          <input id="subrate" name="subrate" type="number" class="form-control" placeholder="Subscription Rate" readonly>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-dollars"></span>
+            </div>
+          </div>
+        </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="agreeTerms" name="terms" value="agree">
@@ -108,9 +116,8 @@
               </label>
             </div>
           </div>
-          <!-- /.col -->
-          <!-- /.col -->
-        </div>
+        </div> -->
+
         <div class="row">
           <div class="col-12">
             <button type="button" id="join" class="btn btn-primary btn-block">Join Our Community</button>
@@ -151,16 +158,13 @@
 <script src="dist/js/socket.js"></script>
 
 <script type="text/javascript">
-   
-
-
   $(document).ready(function() {
     // console.log(data_socket_transporter);
 
     // alert('Dele')
     $('#join').click(function() {
-      var pass = $('#password').val()
-      var pass2 = $('#password2').val()
+      var pass = $('#password').val();
+      var pass2 = $('#password2').val();
       
       if(pass !==pass2) {
         alert('Password Not equal, please re-enter password to continue...');
@@ -177,13 +181,11 @@
       };
       
       data_socket_transporter.emit('newfarmregistration', registrationObject);
-      
+
       data_socket_transporter.on('registration success', (msg) => {
         console.log(msg);
         console.log(msg.msg);
         console.log(msg.api_key);
-
-        localStorage.setItem('SSH_KEY', msg.api_key);
 
         window.location='index.html';
 
@@ -193,6 +195,14 @@
 
   });
 
+
+  function getSubscriptionFee(id){
+    data_socket_transporter.emit('sub_fee', id);
+    data_socket_transporter.on('sub_fee', (rate) => {
+        $('#subrate').val(rate);
+    })
+
+  }
 </script>
 </body>
 </html>

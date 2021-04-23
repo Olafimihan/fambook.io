@@ -279,114 +279,13 @@
 <script src="../../dist/js/demo.js"></script>
 
 <script src="../../dist/js/socket.js"></script>
+<script src="dist/js/journalJS.js"></script>
 
 <!-- page script -->
 <script>
 
-    includeHTML()
-
-    function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /* Loop through a collection of all HTML elements: */
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-            /* Make an HTTP request using the attribute value as the file name: */
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                /* Remove the attribute, and call this function once more: */
-                elmnt.removeAttribute("w3-include-html");
-                includeHTML();
-            }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            /* Exit the function: */
-            return;
-        }
-        }
-    }
-
-    data_socket_transporter.emit('get filtered gl drop down');
-
-    data_socket_transporter.on('get filtered gl drop down', (data)=>{
-
-        // console.log(data)
-        $("#dr_acct").html(data.val);
-        $("#cr_acct").html(data.val); 
-    })
-
-
+       
     
-    function saveData(){  
- 
-        var inObj={
-            dr_acct: $('#dr_acct').val(),
-            cr_acct: $('#cr_acct').val(),
-            tdate  : $('#dated').val(),
-            amount : $('#amt').val(),
-            narra  : $('#narra').val(),
-            account_id: "",
-            serial: 300,
-            glTT: "",
-            user_id: "ashipa",
-            status: 0,
-            balance: 0,
-            current_bal: 0
-        };
-
-        data_socket_transporter.emit('journalentry', inObj )
-        
-        data_socket_transporter.on('journalentry', (outObj)=>{
-            $('#saver').attr('disabled', true);
-            console.log(outObj);
-
-            var str = "<table class='table table-bordered' >"
-            
-            for(var x=0; x<outObj.length; x++){
-                var amt = outObj[x].amount
-                str += "<tr><td>"+ outObj[x].account_id+"</td><td>"+ formatCurrency(amt) +"</td></tr>"
-
-            }
-            str += "</table>"            
-
-            alert("Transaction successfully posted...")
-
-            $("#journal").html(str);
-        }) 
-        
-    }
-
-    function reset(){
-        $('#saver').attr('disabled', false)
-    }
-
-    function printData(){
-        window.print();
-    }
-
-    function formatCurrency(num) {
-        num = num.toString().replace(/\$|\,/g,'');
-        if(isNaN(num))
-        num = "0";
-        sign = (num == (num = Math.abs(num)));
-        num = Math.floor(num*100+0.50000000001);
-        cents = num%100;
-        num = Math.floor(num/100).toString();
-        if(cents<10)
-        cents = "0" + cents;
-        for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
-        num = num.substring(0,num.length-(4*i+3))+','+
-        num.substring(num.length-(4*i+3));
-        return (((sign)?'':'-') + '' + num + '.' + cents);
-    }
-
 </script>
 </body>
 </html>

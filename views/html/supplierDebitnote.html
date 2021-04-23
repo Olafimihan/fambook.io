@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Customer Receipts</title>
+  <title>Supplier Debit note</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,17 +18,10 @@
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-  <style>
-    label{
-      font-size: 14px;
-      display: none;
-    }
-  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-  <!-- Navbar -->
+  
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     
@@ -451,101 +444,71 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-     
+    <!-- Content Header (Page header) -->
+    
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <div class="col-md-5 card h-2">
-          <div class="card card-success">
+        <div class="col-md-7">    
+          <div class="card card-success col-md-12" style="background-color: whitesmoke;">
             <div class="card-header">
-              <h3 class="card-title">Receipts</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                  <i class="fas fa-minus"></i></button>
-              </div>
+            <h3 class="card-title" style="text-align: center; font-size: 20px; font-weight: bolder;">Supplier Debit note</h3>
+            
             </div>
-            <div class="card-body" style="background-color: whitesmoke">
+            <!-- /.card-header -->
+            <div class="card-body card-secondary" style='font-size: 12px'>
               
-              <form action="/cust_receipt" method="POST" id="form">  
-                <div class="form-group" style="font-size: 10px">
-                  <label for="cust_id">Select Customer </label>
-                  <!-- <input type="hidden" id="good_id" class="form-control" value=""> -->
-                  <select id="cust_id" class="form-control" onchange="getCustomerBalance(this.value) " style="font-size: 14px;">
-
+              <!-- <div class="row form-group col-md-12"> -->
+                <div class="form-group col-md-12" >
+                  <label for="supp_acct"> Debit Acct</label>
+                  <select name="supp_acct" class="form-control col-md-8" id="supp_acct" onchange="reset(this.value)" style="font-size: 14px;" >
+  
+                  </select>
+                  <!-- <input type="text" id="balance" readonly><p id="bal_state"  >h</p> -->
+                </div>
+    
+                <div class="form-group col-md-12">
+                  <label for="cr_acct">Credit Acct</label>
+                  <select name="cr_acct" class="form-control col-md-8" id="cr_acct" style="font-size: 14px;">
+  
                   </select>
                 </div>
-                  
-                <div class="form-group">
-                  <label for="method">Payment Method</label>
-                  <select class="form-control" name="method" id="method" style="font-size: 14px;" ></select>
-                </div>
-  
-                <div class="row form-group col-md-12">
-                  <div class="col-md-6">
-                    <label for="amount">Amount</label>
-                    <input type="number" class="form-control" name="amount" id="amount" placeholder="Amount Paid..." style="font-size: 14px;">
-                  </div>
     
-                  <div class="col-md-6" >
-                    <label for="balance">Balance</label>
-                    <input type="number" class="form-control" name="balance" id="balance" readonly placeholder="Balance..." style="font-size: 14px;" >
-                  </div>
-                  
-                </div>
-                
-                <div class="row form-group col-md-12">
-    
-                  <div class="col-md-6">
-                    <label for="dated">Date</label>
-                    <input type="date" class="form-control" name="dated" id="dated" style="font-size: 14px;" >
-                  </div>
-
-                  <div class="col-md-6" >
-                    <label for="rcptno">Receipt No.</label>
-                    <input type="text" class="form-control" name="rcptno" id="rcptno" placeholder="Receipt No..." style="font-size: 14px;" readonly>
-                  </div>
-
-                </div>
- 
-                   
-                <div class="row form-group col-md-12">
-                  <label for="narration">Narration</label>
-                  <input type="text" class="form-control" name="narration" id="narration" placeholder="Narration..." style="font-size: 14px;">
-                </div>
-
-                <!-- <div class="row" >
-                  <div class="col-md-12">
-                    <div class="col-md-6">
-                      <input type="radio" id="" value="Transaction" checked name="mode" style="font-size: 14px;">Transaction Mode
-                    </div>
-                    <div class="col-md-6">
-                      <input type="radio" id="" value="Revearsal" name="mode">Revearsal Mode
-                    </div>
-                  </div>
-                </div> -->
-
-                <div class="row">
-                  <div class="col-md-12"> 
-                    <input type="submit" id="saver" value="Submit Data" class="btn btn-success" style="font-size: 14px;">  
-                    <input type="reset" id="retrieve" value="Refresh" class="btn btn-primary">
-                      
-                  </div>
+              <!-- </div> -->
+              
+              
+              <div class="form-group col-md-12">
+                <label for="amt">DR Amount</label>
+                <input type="number" class="form-control col-md-6" id="amt" class="form-control" >
+              </div>
+              
+              <div class="form-group col-md-12">
+                <label for="dated">Date</label>
+                <input type="date" id="dated" class="form-control col-md-6" >
+              </div>
+              
+              <div class="form-group col-md-12">
+                <label for="narration">Narration</label>
+                <input type="text" id="narration" class="form-control" class="form-control col-md-9" >
               </div>
 
-              </form>
                
+            </div> 
+            <div class="card-footer">
+              <div class="col-md-12">
+                 
+                <input type="button" value="Close" onclick="openers()" class="btn btn-success float-right">
+                <input type="button" id='saver' value="Submit" onclick="saveData()" class="btn btn-primary float-right">
+              </div>
             </div>
+          </div>
 
-            
-             
-          </div> 
         </div>
-
-        <div class="col-md-7 card h-0">
+        <!-- Column-->
+        <div class="col-md-5 card h-6">
           <div class="card card-secondary" style="background-color: whitesmoke;">
             <div class="card-header">
-              <h3 class="card-title">Transactions List</h3>
+              <h4 class="card-title">Current Transactions List</h4>
 
               <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -557,28 +520,31 @@
                 Empty List
               </div>
                 
-            </div> 
+            </div>
+            <div class="card-footer">
+              <div class="col-md-12">
+                 
+                <div class="col-md-12">
+                    <p class="" style="text-align: center; font-size: 18px; font-weight: bold; text-shadow: hotpink;">
+                      Listing All server processed transaction.
+                    </p>
+                </div>  
+                <!-- <input type="button" value="Close" onclick="window.location='index.html'" class="btn btn-success float-right">
+                <input type="button" id='saver' value="Submit" onclick="saveData()" class="btn btn-primary float-right"> -->
+              </div>
+            </div>
+
           </div> 
         </div>
-  
-
-        
-        
-      </div>
-      <div class="row">
-        <!-- <div class="col-12">
-          <a href="#" class="btn btn-secondary">Cancel</a>
-          <input type="submit" value="Save Changes" class="btn btn-success float-right">
-        </div> -->
-      </div>
+            
+      </div> 
     </section>
     <!-- /.content -->
-
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2021 <a href="">Fambook.io </a>.</strong>
-    All rights reserved. Product of DELAF SYSTEMS COMPANY.
+    All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0
     </div>
@@ -593,26 +559,31 @@
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
 
-<!-- <script src="socket-server.js"></script> -->
+<script src="socket-server.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <!-- DataTables -->
 <script src="plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
-
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 
 <script src="dist/js/socket.js"></script>
-<script src="dist/js/receiptJS.js"></script>
+<script src="dist/js/supplierDebitnote.js" ></script>
+
+
+<!-- page script -->
+<script>
  
+
+    
+</script>
 </body>
 </html>

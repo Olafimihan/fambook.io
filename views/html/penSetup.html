@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <style>
+     
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -26,12 +29,417 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <div w3-include-html="menulist.html"></div>
-  
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light" id="userlevel">Administrators</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar"> 
+      <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block" id="username"></a>
+        </div>
+      </div> -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+           
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">
+              <i class="fa fa-chart-bar nav-icon"></i>
+              <p style="font-size: 18px;">Dashboard</p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-laptop-house"></i>
+              <p style="font-size: 18px;">
+                Setup Module
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+            
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="penSetup.html" class="nav-link">
+                  <i class="fa fa-house-user nav-icon"></i>
+                  <p style="font-size: 14px;">Pens</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customersetup.html" class="nav-link">
+                  <i class="fas fa-user-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Customer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="suppliersetup.html" class="nav-link">
+                  <i class="fas fa-user-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="eggSetup.html" class="nav-link">
+                  <i class="fa fa-egg nav-icon"></i>
+                  <p style="font-size: 14px;">Eggs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="feedsetup.html" class="nav-link">
+                  <i class="fas fa-hryvnia	 nav-icon"></i>
+                  <p style="font-size: 14px;">Feeds</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="drugsetup.html" class="nav-link">
+                  <i class="fa fa-prescription-bottle nav-icon"></i>
+                  <p style="font-size: 14px;">Drugs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="505.html" class="nav-link">
+                  <i class="fas fa-university	 nav-icon"></i>
+                  <p style="font-size: 14px;">Banks</p>
+                </a>
+              </li>
+              
+              <!-- <li class="nav-item">
+                <a href="500.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Account Group</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="500.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Account SubGroup</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="500.html" class="nav-link">
+                  <i class="fa fa-book nav-icon"></i>
+                  <p style="font-size: 14px;">GL. Maintenance</p>
+                </a>
+              </li> -->
+
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p style="font-size: 18px;">
+                Accounts Module
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="receipt.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Receipt </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="payment.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Payment </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="customerDebitnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Debit notes </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customerCreditnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Credit notes</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="supplierDebitnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Debit notes</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="supplierCreditnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Credit notes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="journal.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Journal Entry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="stockadjustment.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Stock Adjustment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reversal.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Transactions Reversals</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav-item has-treeview" id="admin1">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p style="font-size: 18px;">
+                Admin Module
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="404.html" class="nav-link">
+                  <i class="fa fa-filter nav-icon"></i>
+                  <p style="font-size: 14px;">End of Pen Process</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="equilibriumsetting.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Equilibrium Settings</p>
+                </a>
+              </li>
+               
+            </ul>
+          </li>
+          
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p style="font-size: 18px;">
+                Admin Reports
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <!-- <li class="nav-item">
+                <a href="penslist.html" class="nav-link">
+                  <i class="fa fa-filter nav-icon"></i>
+                  <p>Pens List</p>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="customerledger.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Ledger</p>
+                </a>
+              </li>
+               
+              <li class="nav-item">
+                <a href="supplierledger.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Ledger</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="debtorslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Debtors List</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="creditorslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Creditors List</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="contribution.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Contribution</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="investment.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Cost Analysis</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="salesanalysis.html" class="nav-link">
+                  <i class="fa fa-columns nav-icon"></i>
+                  <p style="font-size: 14px;">Sales</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="production.html" class="nav-link">
+                  <i class="fa fa-cubes nav-icon"></i>
+                  <p style="font-size: 14px;">Production</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="mortality.html" class="nav-link">
+                  <i class="fa fa-ambulance nav-icon"></i>
+                  <p style="font-size: 14px;">Mortality</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="expense.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Expense Report</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="stockCard.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Stock Movement Report</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="productslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Products Stock Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="feedslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Feed Stock Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="drugslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Drugs Stock Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="feedusage.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Feeds/Drugs Usage Report</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p style="font-size: 18px;">
+                Graph Report
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="graph_rep.html" class="nav-link">
+                  <i class="far fa-chart-pie nav-icon"></i>
+                  <p style="font-size: 14px;">Production </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="graphMortality.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Mortality</p>
+                </a>
+              </li>
+ 
+
+            </ul>
+
+          </li> 
+            
+          <li class="nav-item has-treeview" id="accts">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p style="font-size: 18px;">
+                Financial Report
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="chartofacct.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Charts Of Accounts</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="profitandloss.html" class="nav-link">
+                  <i class="far fa-pounds nav-icon"></i>
+                  <p style="font-size: 14px;">Profit and Loss</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="trialbalance.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Trial Balance</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="glhistory.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">GL. Transactions</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li> 
+            
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <i class="fa fa-sign-out-alt nav-icon"></i>
+              <p style="font-size: 18px;">Exit Application</p>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section style="background-color: cadetblue; color: whitesmoke;" class="content-header">
+    <!-- <section style="background-color: cadetblue; color: whitesmoke;" class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -39,14 +447,14 @@
           </div>
  
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+      </div>
+    </section> -->
 
     <!-- Main content -->
     <section class="content">
       <div class="row">
         
-        <div class="col-md-12" >
+        <div class="col-md-12" id="plist" >
           <div class="card card-secondary">
               <div class="card-header">
                   <h3 class="card-title">Pens</h3>
@@ -57,11 +465,14 @@
               </div>
               <div class="card-body" id="penslist">
                   
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary" type="button" id="addnew" style="font-size: 14px;" > <i class="fa fa-database">Add New Pen</i></button>
               </div> 
           </div> 
         </div>
         
-        <div class="col-md-12">
+        <div class="col-md-12" id="psetup" >
           <div class="card card-primary">
             <div class="card-header">
               <h7 class="card-title">Pen Setup</h7>
@@ -72,153 +483,69 @@
               </div>
             </div>
             <div class="card-body">
-
-
-                <div class="row">
-                  <div class="col">
-                    <input type="hidden" id="pen_id" class="form-control" value="Pen name">
-                    <input type="text" id="pen_name" class="form-control" value="Pen name">
+              <div class="col-md-12 col-sm-4" style="font-size: 12px;">
+                <!--First Row-->
+                
+                <div class="row col-md-12">
+                  <div class="col-md-6">
+                    <input type="hidden" id="pen_id" class="form-control" >
+                    <label for="pen_name">Pen Name</label>
+                    <input type="text" id="pen_name" class="form-control" placeholder="Pen Name..." >
                   </div>
 
-                  <div class="col">
-                    <div class="form-group">
-                      <!-- <label for="inputClientCompany">Quantity of birds</label> -->
-                      <input type="text" id="qty" class="form-control" placeholder="Quantity of birds in Pen house" readonly>
-                          
-                  </div>
-
-                  
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <label for="inputDescription">Morta Acct DR</label>
-                    <select name="morta_acctdr" id="morta_acctdr" class="form-control">
-    
-                    </select>
-                  </div>
-                  <div class="col">
-                    <label for="inputDescription">Morta Acct CR</label>
-                    <select name="morta_acctcr" id="morta_acctcr" class="form-control">
-    
-                    </select>
+                  <div class="col-md-6">
+                    <label for="mortacost">Mortality Cost/Bird</label>
+                      <input type="text" id="mortacost" class="form-control" placeholder="Mortality Cost">      
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col">
-                    <label for="inputDescription">Prod Acct DR</label>
-                    <select name="production_acctdr" id="production_acctdr" class="form-control">
+                <!--First Row-->
+                
+                <div class="row col-md-12">
 
-                    </select>
+                  <div class="col-md-6">
+                    <label for="dob">Date Of Birth</label>
+                    <input type="date" id="dob" class="form-control" placeholder="Date Of Birth"  >                          
                   </div>
 
-                  <div class="col">
-                    <label for="inputDescription">Prod Acct CR</label>
-                    <select name="production_acctcr" id="production_acctcr" class="form-control">
-
-                    </select>
-                  </div>
-
-                </div>
-               
-                <div class="row">
-                  <div class="col">
-                    <label for="inputDescription">Feed Cost Acct</label>
-                    <select name="feed_costacct" id="feed_costacct" class="form-control">
-    
-                    </select>
-                  </div>
-                  
-                  <div class="col">
-                    <label for="inputDescription">Drug Cost Acct</label>
-                    <select name="drug_costacct" id="drug_costacct" class="form-control">
-    
-                    </select>
-                  </div>
-
-                </div>
-               
-                <div class="row">
-                  <div class="col">
-                    <label for="inputDescription">Morta Cost Acct</label>
-                    <select name="morta_costacct" id="morta_costacct" class="form-control">
-    
-                    </select>
-                  </div>
-                  
-                  <div class="col">
-                    <label for="inputDescription">Investment Acct</label>
-                    <select name="investment_acct" id="investment_acct" class="form-control">
-    
-                    </select>
-                    
-                  </div>
-
+                  <div class="col-md-6">
+                    <label for="water">Water QTy</label>
+                    <input type="text" id="water" class="form-control" placeholder="Daily H2o Consumption quantity" >
+                  </div>  
                 </div>
 
-                <div class="row">
-                  <div class="col">
-                    <label for="inputDescription">Old Layer Sales Acct</label>
-                    <select name="layer_acct" id="layer_acct" class="form-control">
-    
-                    </select>
-                  </div>
-                  
-                  <div class="col">
-                    <label for="inputDescription">Layer Cost Acct</label>
-                    <select name="layer_costacct" id="layer_costacct" class="form-control">
-    
-                    </select>
-                    
+                <div class="row col-md-12">
+
+                  <div class="col-md-6">
+                    <label for="rate">H2o Rate/ltr</label>
+                    <input type="number" id="rate" class="form-control" placeholder="Water Rate per liter"  >                          
                   </div>
 
-                </div>
-               
-                <div class="row">
-                  <div class="col">
-                    <input type="text" id="mortacost" class="form-control" placeholder="Mortality Cost">
-                      
-                  </div>
+                  <!-- <div class="col-md-6">
+                    <label for="diminition">Diminition Percent</label>
+                    <input type="number" id="diminition" class="form-control" placeholder="Mortality Diminition Percent" >
+                  </div>  -->
 
-                  <div class="col">
-                    <input type="text" id="dob" class="form-control" placeholder="Date Of Birth" readonly >
+                  <div class="col-md-6">
+                    <label for="wage">Monthly Wage</label>
+                    <input type="number" id="wage" class="form-control" placeholder="Total Monthly Wage"  >                          
                   </div>
-
                 </div>
 
-               
+              </div>
             </div>
+
             <div class="card-footer">
-                <div class="col-12">
-                    <!-- <a href="#" class="btn btn-secondary">Cancel</a> -->
-                    <input type="button" value="Update Changes" onclick="updateData()" class="btn btn-primary float-right">
-                    <input type="button" value="Submit Data" onclick="saveData()" class="btn btn-success float-right">
-                  </div>
+              <div >
+                <!-- <a href="#" class="btn btn-secondary">Cancel</a> -->
+                <input type="button" value="Update Changes" onclick="updateData()" class="btn btn-primary float-right">
+                <input type="button" value="Submit Data" id='save' onclick="saveData()" class="btn btn-success float-right">
+              </div>
             </div>
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
         </div>
-
-        <!-- <div class="col-md-4" style="float: left;">
-            <div class="card card-secondary">
-                <div class="card-header">
-                    <h3 class="card-title">Pens</h3>
-    
-                    <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                        <i class="fas fa-minus"></i></button>
-                    </div>
-                </div>
-                <div class="card-body" id="penslist">
-                    
-                </div> 
-            </div> 
-        </div> -->
-  
-
-        
         
       </div>
       <div class="row">
@@ -266,183 +593,6 @@
 <script src="dist/js/socket.js"></script>
 <script src="dist/js/included.js"></script>
 
- 
-<script>
-  window.onload=()=>{
-    // let api_key="";
-    // api_key=localStorage.getItem('SSH_KEY') 
-    console.log('LS: '+api_key)
-    // $(function(){
-    // })
-
-    includeHTML()
-
-    function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      /* Loop through a collection of all HTML elements: */
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-          elmnt = z[i];
-          /*search for elements with a certain atrribute:*/
-          file = elmnt.getAttribute("w3-include-html");
-          if (file) {
-          /* Make an HTTP request using the attribute value as the file name: */
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-              if (this.readyState == 4) {
-              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-              /* Remove the attribute, and call this function once more: */
-              elmnt.removeAttribute("w3-include-html");
-              includeHTML();
-              }
-          }
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /* Exit the function: */
-          return;
-          }
-      }
-    }
-    console.log("AT Socket HEad: "+api_key);
-    data_socket_transporter.emit('get gl drop down', {api_key: api_key});
-
-    data_socket_transporter.on('get gl drop down', (data)=>{
-
-        $("#morta_acctdr").html(data.val);
-        $("#morta_acctcr").html(data.val);
-        $("#production_acctcr").html(data.val);
-        $("#production_acctdr").html(data.val);
-        $("#feed_costacct").html(data.val);
-        $("#drug_costacct").html(data.val);
-        $("#morta_costacct").html(data.val);
-        $("#investment_acct").html(data.val);
-        $("#layer_acct").html(data.val);
-        $("#layer_costacct").html(data.val);
-
-
-        $("#penslist").html(data.pens);
-
-        console.log(data.pens)
-    
-
-    })
-
-    function editter(id){
-        data_socket_transporter.emit('editpen', id)
-        data_socket_transporter.on('editpen', (data)=>{
-            var resultSet = data.result;  
-            var dated     = data.dated;
-
-            // console.log(resultSet)
-
-            // alert(resultSet[0].date)
-        
-            $("#pen_id").val(resultSet[0].pen_id);
-            $("#pen_name").val(resultSet[0].pen_name);
-            $("#mortacost").val(resultSet[0].mortalityCost);
-            $("#qty").val(resultSet[0].quantity_of_birds);
-
-            $("#dob").val(dated);
-            
-            $("#morta_acctdr").val(resultSet[0].account_morta_dr);
-            $("#morta_acctcr").val(resultSet[0].account_morta_cr);
-
-            $("#production_acctcr").val(resultSet[0].account_prod_cr);
-            $("#production_acctdr").val(resultSet[0].account_prod_dr);
-            
-            $("#feed_costacct").val(resultSet[0].feed_cost_acct);
-            $("#drug_costacct").val(resultSet[0].direct_exp_cost_acct);
-            $("#morta_costacct").val(resultSet[0].mortality_cost_acct);
-            
-            $("#investment_acct").val(resultSet[0].pen_investment);
-
-            $("#layer_acct").val(resultSet[0].layers_sales_acct);
-            $("#layer_costacct").val(resultSet[0].layers_cfs_acct);
-
-    
-
-
-        })
-    }
-
-    function saveData(){
-        let pname = $("#pen_name").val();
-        let mortacost = $("#mortacost").val();
-        
-        let morta_acctdr = $("#morta_acctdr").val();
-        let morta_acctcr = $("#morta_acctcr").val();
-
-        let prod_acctcr = $("#production_acctcr").val();
-        let prod_acctdr = $("#production_acctdr").val();
-        
-        let feedcostacct = $("#feed_costacct").val();
-        let drugcostacct = $("#drug_costacct").val();
-        let mortacostacct = $("#morta_costacct").val();
-        
-        let investmentacct = $("#investment_acct").val();
-        let salesacct = $("#layer_acct").val();
-        let salescostacct = $("#layer_costacct").val();
-    
-        var outData = {
-            pname: pname, mortacost: mortacost, morta_acctcr: morta_acctcr, morta_acctdr: morta_acctdr, prod_acctcr: prod_acctcr, prod_acctdr: prod_acctdr,
-            feedcostacct: feedcostacct, drugcostacct: drugcostacct, mortacostacct: mortacostacct, investmentacct: investmentacct,
-            salesAcct: salesacct, salesCostAcct: salescostacct
-        }
-
-        // data_socket_transporter.emit('savepen', outData)
-
-
-    }
-    function updateData(){
-        let pname = $("#pen_name").val();
-        let mortacost = $("#mortacost").val();
-        
-        let morta_acctdr = $("#morta_acctdr").val();
-        let morta_acctcr = $("#morta_acctcr").val();
-
-        let prod_acctcr = $("#production_acctcr").val();
-        let prod_acctdr = $("#production_acctdr").val();
-        
-        let feedcostacct = $("#feed_costacct").val();
-        let drugcostacct = $("#drug_costacct").val();
-        let mortacostacct = $("#morta_costacct").val();
-        
-        let investmentacct = $("#investment_acct").val();
-        
-        let Salesacct = $("#layer_acct").val();
-        let Costacct = $("#layer_costacct").val();
-
-        let dob = $("#dob").val();
-    //  alert(dob)
-        var outData={
-            pen_id: $("#pen_id").val(), 
-            pname: pname, 
-            mortacost: mortacost, 
-            morta_acctcr: morta_acctcr, 
-            morta_acctdr: morta_acctdr, 
-            prod_acctcr: prod_acctcr, 
-            prod_acctdr: prod_acctdr,
-            feedcostacct: feedcostacct, 
-            drugcostacct: drugcostacct, 
-            mortacostacct: mortacostacct, 
-            investmentacct: investmentacct,
-            salesAcct: Salesacct,
-            CostAcct: Costacct
-        }
-
-        data_socket_transporter.emit('updatepen', outData)
-
-
-    }
-
-    data_socket_transporter.on('errmsg', (err)=>{
-        alert(err.sqlMessage)
-    })
-  }
-
-
-
-</script>
+  
 </body>
 </html>
