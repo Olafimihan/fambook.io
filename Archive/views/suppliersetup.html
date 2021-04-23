@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Suppliers Setup</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+   
+    </nav>
+    <!-- /.navbar -->
+  
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light" id="userlevel">Administrators</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar"> 
+      <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block" id="username"></a>
+        </div>
+      </div> -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+           
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">
+              <i class="fa fa-chart-bar nav-icon"></i>
+              <p style="font-size: 18px;">Dashboard</p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-laptop-house"></i>
+              <p style="font-size: 18px;">
+                Setup Module
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+            
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="penSetup.html" class="nav-link">
+                  <i class="fa fa-house-user nav-icon"></i>
+                  <p style="font-size: 14px;">Pens</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customersetup.html" class="nav-link">
+                  <i class="fas fa-user-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Customer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="suppliersetup.html" class="nav-link">
+                  <i class="fas fa-user-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="eggSetup.html" class="nav-link">
+                  <i class="fa fa-egg nav-icon"></i>
+                  <p style="font-size: 14px;">Eggs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="feedsetup.html" class="nav-link">
+                  <i class="fas fa-hryvnia	 nav-icon"></i>
+                  <p style="font-size: 14px;">Feeds</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="drugsetup.html" class="nav-link">
+                  <i class="fa fa-prescription-bottle nav-icon"></i>
+                  <p style="font-size: 14px;">Drugs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="505.html" class="nav-link">
+                  <i class="fas fa-university	 nav-icon"></i>
+                  <p style="font-size: 14px;">Banks</p>
+                </a>
+              </li>
+              
+              <!-- <li class="nav-item">
+                <a href="500.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Account Group</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="500.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Account SubGroup</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="500.html" class="nav-link">
+                  <i class="fa fa-book nav-icon"></i>
+                  <p style="font-size: 14px;">GL. Maintenance</p>
+                </a>
+              </li> -->
+
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p style="font-size: 18px;">
+                Accounts Module
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="receipt.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Receipt </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="payment.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Payment </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="customerDebitnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Debit notes </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customerCreditnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Credit notes</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="supplierDebitnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Debit notes</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="supplierCreditnote.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Credit notes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="journal.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Journal Entry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="stockadjustment.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Stock Adjustment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reversal.html" class="nav-link">
+                  <i class="fa fa-building nav-icon"></i>
+                  <p style="font-size: 14px;">Transactions Reversals</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav-item has-treeview" id="admin1">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p style="font-size: 18px;">
+                Admin Module
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="404.html" class="nav-link">
+                  <i class="fa fa-filter nav-icon"></i>
+                  <p style="font-size: 14px;">End of Pen Process</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="equilibriumsetting.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Equilibrium Settings</p>
+                </a>
+              </li>
+               
+            </ul>
+          </li>
+          
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p style="font-size: 18px;">
+                Admin Reports
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <!-- <li class="nav-item">
+                <a href="penslist.html" class="nav-link">
+                  <i class="fa fa-filter nav-icon"></i>
+                  <p>Pens List</p>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="customerledger.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Customer Ledger</p>
+                </a>
+              </li>
+               
+              <li class="nav-item">
+                <a href="supplierledger.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Supplier Ledger</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="debtorslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Debtors List</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="creditorslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Creditors List</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="contribution.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Contribution</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="investment.html" class="nav-link">
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p style="font-size: 14px;">Cost Analysis</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="salesanalysis.html" class="nav-link">
+                  <i class="fa fa-columns nav-icon"></i>
+                  <p style="font-size: 14px;">Sales</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="production.html" class="nav-link">
+                  <i class="fa fa-cubes nav-icon"></i>
+                  <p style="font-size: 14px;">Production</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="mortality.html" class="nav-link">
+                  <i class="fa fa-ambulance nav-icon"></i>
+                  <p style="font-size: 14px;">Mortality</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="expense.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Expense Report</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="stockCard.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Stock Movement Report</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="productslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Products Stock Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="feedslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Feed Stock Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="drugslist.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Drugs Stock Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="feedusage.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Feeds/Drugs Usage Report</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p style="font-size: 18px;">
+                Graph Report
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="graph_rep.html" class="nav-link">
+                  <i class="far fa-chart-pie nav-icon"></i>
+                  <p style="font-size: 14px;">Production </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="graphMortality.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Mortality</p>
+                </a>
+              </li>
+ 
+
+            </ul>
+
+          </li> 
+            
+          <li class="nav-item has-treeview" id="accts">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p style="font-size: 18px;">
+                Financial Report
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="chartofacct.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Charts Of Accounts</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="profitandloss.html" class="nav-link">
+                  <i class="far fa-pounds nav-icon"></i>
+                  <p style="font-size: 14px;">Profit and Loss</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="trialbalance.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">Trial Balance</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="glhistory.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size: 14px;">GL. Transactions</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li> 
+            
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <i class="fa fa-sign-out-alt nav-icon"></i>
+              <p style="font-size: 18px;">Exit Application</p>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>  
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- <section style="background-color: cadetblue; color: whitesmoke;" class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Suppliers Setup</h1>
+          </div> 
+        </div>
+      </div> 
+    </section> -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Suppliers Setup</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                  <i class="fas fa-minus"></i></button>
+              </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="inputName">Supplier Name</label>
+                    <input type="hidden" id="supp_id" class="form-control" value="">
+                    <input type="text" id="suppname" class="form-control" placeholder="Enter Supplier name">
+                  </div>
+                  
+                  <!-- <div class="col-md-12" id="refresh">
+                    <div class="card card-primary">
+                      <div class="card-header">
+                        <h3 class="card-title">Spooling data</h3>
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content"><i class="fas fa-sync-alt"></i></button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        Wait while we prepare your report...
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <div class="form-group">
+                    <label for="inputDescription">Address</label>
+                    <input type="text" class="form-control" name="address" id="address">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="inputDescription">Email</label>
+                    <input type="text" class="form-control" name="email" id="email">
+    
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="inputDescription">Telephone</label>
+                    <input type="text" class="form-control" name="telephone" id="telephone">
+                  </div>
+<!--     
+                  <div class="form-group">
+                    <label for="inputDescription">Birthdate</label>
+                    <input type="date" class="form-control" name="bday" id="bday">
+                  </div>
+                   -->
+                  
+               
+            </div>
+
+            <div class="card-footer">
+                <div class="col-12">
+                    <!-- <a href="#" class="btn btn-secondary">Cancel</a> -->
+                    <input type="button" id="upd" value="Update Changes" onclick="updateData()" disabled class="btn btn-primary float-right">
+                    <input type="button" id="sub" value="Submit Data" onclick="saveData()" class="btn btn-success float-right">
+                  </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+
+        <div class="col-md-6">
+            <div class="card card-secondary">
+                <div class="card-header">
+                    <h3 class="card-title">Suppliers List</h3>
+    
+                    <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="card-body" style="height: 500px; overflow: scroll;">
+                    <div id="supplierlist" >
+
+                    </div>
+                    
+                </div> 
+            </div> 
+        </div>
+  
+
+        
+        
+      </div>
+      <div class="row">
+        <!-- <div class="col-12">
+          <a href="#" class="btn btn-secondary">Cancel</a>
+          <input type="submit" value="Save Changes" class="btn btn-success float-right">
+        </div> -->
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2020 <a href="">Farmbook </a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0
+    </div>
+  </footer>
+  
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
+<!-- <script src="socket-server.js"></script> -->
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<script src="dist/js/socket.js"></script>
+
+
+<script>
+ 
+ 
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+          }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+      }
+  }
+}
+
+data_socket_transporter.emit('get suppliers list', {api_key: localStorage.getItem('SSH_KEY')});
+
+data_socket_transporter.on('get suppliers list', (data) => {
+    // console.log(data)
+    var str="<table class='table table-bordered' >"
+
+    var tot_amt=0;
+    data.forEach((recs)=>{ 
+        tot_amt+= recs.current_bal;
+        str += "<tr style='font-size: 14px'><td>" + recs.supplier_company_name + "</td><td>" + recs.current_bal + "</td><td><button class='btn btn-primary' id='"+recs.supplier_id+"' onclick='editter(this.id)' ><i class='fa fa-edit' ></i></button></td><td><button class='btn btn-primary' id='"+recs.supplier_id+"' onclick='deleter(this.id)' ><i class='fa fa-trash' ></i></button></td></tr>"
+    })
+
+    // str += "<tr><td colspan='5' >TOTAL </td><td style='text-align: right; font-weight: bolder'>"+ tot_amt.toFixed(2)+"</td></tr>"
+
+
+    str += "</table>"; 
+    $("#supplierlist").html(str); 
+
+});
+
+function deleter(id){
+    data_socket_transporter.emit('deletesupplier', id);
+    data_socket_transporter.emit('get suppliers list', {api_key: localStorage.getItem('SSH_KEY')});
+    data_socket_transporter.on('get suppliers list', (data) => {
+      // console.log(data)
+      var str="<table class='table table-head-fixed text-nowrap' >"
+
+        data.forEach((recs)=>{
+          str += "<tr style='font-size: 14px'><td>" + recs.supplier_company_name + "</td><td>" + recs.current_bal + "</td><td><button class='btn btn-primary' id='"+recs.supplier_id+"' onclick='editter(this.id)' ><i class='fa fa-edit' ></i></button></td><td><button class='btn btn-primary' id='"+recs.supplier_id+"' onclick='deleter(this.id)' ><i class='fa fa-trash' ></i></button></td></tr>"
+      })
+
+      str += "</table>"; 
+      $("#supplierlist").html(str);
+    })
+
+  }
+
+
+function editter(id){
+    // alert(id)
+    $("#upd").attr('disabled', false)
+    $("#sub").attr('disabled', true)
+    
+    data_socket_transporter.emit('editsuppliers', id)
+    data_socket_transporter.on('editsuppliers', (resultSet)=>{
+        console.log(resultSet)
+
+        $("#supp_id").val(resultSet[0].supplier_id);
+        $("#suppname").val(resultSet[0].supplier_company_name);
+        $("#address").val(resultSet[0].address);
+        $("#telephone").val(resultSet[0].telephone_no);
+        
+        $("#email").val(resultSet[0].e_mail);
+        
+        $("#bday").val(resultSet[0].birthdate);
+ 
+
+
+    })
+}
+
+function saveData(){
+  $('#save').attr('disabled', true);
+
+    let name = $("#suppname").val();
+    let address = $("#address").val();
+    
+    let telephone = $("#telephone").val();
+    let email = $("#email").val();
+
+    let bday = $("#bday").val(); 
+    let api_key = localStorage.getItem('SSH_KEY') ; 
+
+    var outData={
+        suppname: name, address: address, phone: telephone, email: email, api_key: api_key
+    }
+ 
+    data_socket_transporter.emit('savesuppliers', outData)
+    data_socket_transporter.on('savesuppliers', (responseObj)=>{
+        console.log(responseObj.insertId)
+    }) 
+}
+
+function updateData(){
+    let custid = $("#supp_id").val();
+    let name = $("#suppname").val();
+    let address = $("#address").val();
+    
+    let telephone = $("#telephone").val();
+    let email = $("#email").val();
+
+    // let bday = $("#bday").val(); 
+
+    var outData={
+        supp_id: custid, suppname: name, address: address, phone: telephone, email: email 
+    }
+ 
+    data_socket_transporter.emit('updatesuppliers', outData)
+
+}
+
+ 
+</script>
+</body>
+</html>
